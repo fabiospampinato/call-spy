@@ -29,8 +29,8 @@ res.called; // false
 fn ( 1, 2, 3 ); // 'yay!'
 
 res.called; // true
-res.result; // 'yay!'
-res.args; // [1, 2, 3]
+res.return; // 'yay!'
+res.arguments; // [1, 2, 3]
 ```
 
 ## License

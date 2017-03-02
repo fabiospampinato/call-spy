@@ -35,8 +35,8 @@ describe ( 'callSpy', it => {
 
     t.true ( t.context.res.called );
     t.deepEqual ( that, t.context.res.this );
-    t.deepEqual ( args, t.context.res.args );
-    t.is ( 'hello!', t.context.res.result );
+    t.deepEqual ( args, t.context.res.arguments );
+    t.is ( 'hello!', t.context.res.return );
 
   });
 

@@ -4,8 +4,8 @@
 type result = {
   called: boolean;
   this?: any;
-  args?: any[];
-  result?: any;
+  arguments?: any[];
+  return?: any;
 };
 
 /* EXPORT */

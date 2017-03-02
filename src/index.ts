@@ -15,8 +15,8 @@ function callSpy ( fn: Function, res: result ): Function {
 
     res.called = true;
     res.this = this;
-    res.args = args;
-    res.result = result;
+    res.arguments = args;
+    res.return = result;
 
     return result;
 
