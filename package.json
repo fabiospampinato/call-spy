@@ -1,6 +1,6 @@
 {
   "name": "call-spy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tiny wrapper for spying on function calls.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,8 @@
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage .nyc_output",
     "clean": "npm run clean:dist && npm run clean:coverage",
-    "precompile": "npm run clean:dist",
     "compile": "tsc --skipLibCheck",
+    "compile:watch": "tsc --skipLibCheck --watch",
     "lint": "tslint \"src/**/*.ts*\" --force",
     "test": "ava",
     "test:watch": "ava --watch",
