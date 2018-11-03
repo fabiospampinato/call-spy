@@ -1,8 +1,5 @@
 # callSpy
 
-![Issues](https://img.shields.io/github/issues/fabiospampinato/call-spy.svg)
-[![NPM version](https://img.shields.io/npm/v/call-spy.svg)](https://www.npmjs.com/package/call-spy)
-
 Tiny wrapper for spying on function calls.
 
 ## Install
