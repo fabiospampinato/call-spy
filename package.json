@@ -1,6 +1,6 @@
 {
   "name": "call-spy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tiny wrapper for spying on function calls.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
