@@ -26,4 +26,4 @@ function callSpy ( fn: Function, res: result ): Function {
 
 /* EXPORT */
 
-export = Object.assign ( callSpy, { default: callSpy } );
+export default callSpy;
