@@ -15,7 +15,7 @@ function callSpy ( fn: Function, res: result ): Function {
     const result = fn.apply ( this, args );
 
     res.called = true;
-    res.calls++;
+    res.calls = ( res.calls || 0 ) + 1;
     res.this = this;
     res.arguments = args;
     res.return = result;
