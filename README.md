@@ -22,10 +22,12 @@ const res = {};
 fn = callSpy ( fn, res );
 
 res.called; // false
+res.calls; // 0
 
 fn ( 1, 2, 3 ); // 'yay!'
 
 res.called; // true
+res.calls; // 1
 res.return; // 'yay!'
 res.arguments; // [1, 2, 3]
 ```

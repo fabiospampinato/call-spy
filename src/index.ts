@@ -8,12 +8,14 @@ import {result} from './types';
 function callSpy ( fn: Function, res: result ): Function {
 
   res.called = false;
+  res.calls = 0;
 
   return function ( ...args ) {
 
     const result = fn.apply ( this, args );
 
     res.called = true;
+    res.calls++;
     res.this = this;
     res.arguments = args;
     res.return = result;

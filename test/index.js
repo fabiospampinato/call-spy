@@ -26,6 +26,19 @@ describe ( 'callSpy', it => {
 
   });
 
+  it ( 'Detects how many times the function has been called', t => {
+
+    t.is ( t.context.res.calls, 0 );
+
+    t.context.fn ();
+    t.context.fn ();
+    t.context.fn ();
+
+    t.is ( t.context.res.calls, 3 );
+
+  });
+
+
   it ( 'Stores this, arguments and result in an object', t => {
 
     const that = { me: true },
