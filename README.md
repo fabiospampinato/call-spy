@@ -1,6 +1,6 @@
 # callSpy
 
-Tiny wrapper for spying on function calls.
+Tiny function for spying on function calls.
 
 ## Install
 
@@ -13,23 +13,17 @@ $ npm install --save call-spy
 ```js
 import callSpy from 'call-spy';
 
-function fn () {
-  return 'yay!';
-}
+const [fn, result] = callSpy ( () => 'yay' );
 
-const res = {};
-
-fn = callSpy ( fn, res );
-
-res.called; // false
-res.calls; // 0
+result.called; // false
+result.calls; // 0
 
 fn ( 1, 2, 3 ); // 'yay!'
 
-res.called; // true
-res.calls; // 1
-res.return; // 'yay!'
-res.arguments; // [1, 2, 3]
+result.called; // true
+result.calls; // 1
+result.return; // 'yay!'
+result.arguments; // [1, 2, 3]
 ```
 
 ## License

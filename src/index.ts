@@ -5,24 +5,31 @@ import {result} from './types';
 
 /* CALL SPY */
 
-function callSpy ( fn: Function, res: result ): Function {
+function callSpy ( fn: Function ): [Function, result] {
 
-  res.called = false;
-  res.calls = 0;
+  const result: result = {
+    called: false,
+    calls: 0,
+    this: undefined,
+    arguments: [],
+    return: undefined
+  };
 
-  return function ( ...args ) {
+  function fnSpy ( ...args ) {
 
-    const result = fn.apply ( this, args );
+    const ret = fn.apply ( this, args );
 
-    res.called = true;
-    res.calls = ( res.calls || 0 ) + 1;
-    res.this = this;
-    res.arguments = args;
-    res.return = result;
+    result.called = true;
+    result.calls++;
+    result.this = this;
+    result.arguments = args;
+    result.return = ret;
 
-    return result;
+    return ret;
 
   };
+
+  return [fnSpy, result];
 
 }
 

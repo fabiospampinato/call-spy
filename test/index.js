@@ -11,8 +11,10 @@ describe ( 'callSpy', it => {
 
   it.beforeEach ( t => {
 
-    t.context.res = {};
-    t.context.fn = callSpy ( fn, t.context.res );
+    const [fnSpy, res] = callSpy ( fn, t.context.res );
+
+    t.context.fn = fnSpy;
+    t.context.res = res;
 
   });
 
@@ -37,7 +39,6 @@ describe ( 'callSpy', it => {
     t.is ( t.context.res.calls, 3 );
 
   });
-
 
   it ( 'Stores this, arguments and result in an object', t => {
 
