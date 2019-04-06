@@ -9,6 +9,8 @@ type result = {
   return: any;
 };
 
+type fn = ( ...args: any[] ) => any;
+
 /* EXPORT */
 
-export {result};
+export {result, fn};

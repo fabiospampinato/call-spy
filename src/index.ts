@@ -1,11 +1,11 @@
 
 /* IMPORT */
 
-import {result} from './types';
+import {result, fn} from './types';
 
 /* CALL SPY */
 
-function callSpy ( fn: Function ): [Function, result] {
+function callSpy ( fn: fn ): [fn, result] {
 
   const result: result = {
     called: false,
