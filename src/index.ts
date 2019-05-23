@@ -17,12 +17,13 @@ function callSpy ( fn: fn ): [fn, result] {
 
   function fnSpy ( ...args ) {
 
-    const ret = fn.apply ( this, args );
-
     result.called = true;
     result.calls++;
     result.this = this;
     result.arguments = args;
+
+    const ret = fn.apply ( this, args );
+
     result.return = ret;
 
     return ret;
