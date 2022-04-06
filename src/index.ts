@@ -1,13 +1,13 @@
 
 /* IMPORT */
 
-import {result, fn} from './types';
+import type {FN, Result} from './types';
 
-/* CALL SPY */
+/* MAIN */
 
-function callSpy ( fn: fn ): [fn, result] {
+const callSpy = <Arguments extends unknown[], Return> ( fn: FN<Arguments, Return> ): [FN<Arguments, Return>, Result<Arguments, Return>] => {
 
-  const result: result = {
+  const result: Result<any, any> = {
     called: false,
     calls: 0,
     this: undefined,
@@ -15,7 +15,7 @@ function callSpy ( fn: fn ): [fn, result] {
     return: undefined
   };
 
-  function fnSpy ( ...args ) {
+  function fnSpy ( this: any, ...args: Arguments ): Return {
 
     result.called = true;
     result.calls++;
@@ -32,7 +32,7 @@ function callSpy ( fn: fn ): [fn, result] {
 
   return [fnSpy, result];
 
-}
+};
 
 /* EXPORT */
 

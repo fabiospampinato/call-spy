@@ -1,5 +1,5 @@
 
-/* MOCKS */
+/* MAIN */
 
 function fn () {
 
@@ -9,4 +9,4 @@ function fn () {
 
 /* EXPORT */
 
-module.exports = {fn};
+export {fn};

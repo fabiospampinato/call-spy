@@ -1,16 +1,16 @@
 
-/* TYPES */
+/* MAIN */
 
-type result = {
-  called: boolean;
-  calls: number;
-  this: any;
-  arguments: any[];
-  return: any;
+type FN<Arguments extends unknown[], Return> = ( ...args: Arguments ) => Return;
+
+type Result<Arguments, Return> = {
+  called: boolean,
+  calls: number,
+  this: any,
+  arguments: Arguments,
+  return: Return
 };
-
-type fn = ( ...args: any[] ) => any;
 
 /* EXPORT */
 
-export {result, fn};
+export type {FN, Result};
