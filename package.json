@@ -1,7 +1,7 @@
 {
   "name": "call-spy",
   "repository": "github:fabiospampinato/call-spy",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Tiny function for spying on function calls.",
   "type": "module",
   "main": "dist/index.js",
