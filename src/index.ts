@@ -37,3 +37,4 @@ const callSpy = <Arguments extends unknown[], Return> ( fn: FN<Arguments, Return
 /* EXPORT */
 
 export default callSpy;
+export type {Result};
