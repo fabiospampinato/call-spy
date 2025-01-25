@@ -4,8 +4,8 @@ Tiny function for spying on function calls.
 
 ## Install
 
-```
-npm install --save call-spy
+```sh
+npm install call-spy
 ```
 
 ## Usage
