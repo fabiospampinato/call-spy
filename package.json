@@ -1,8 +1,9 @@
 {
   "name": "call-spy",
   "repository": "github:fabiospampinato/call-spy",
-  "version": "3.0.1",
   "description": "Tiny function for spying on function calls.",
+  "license": "MIT",
+  "version": "3.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
@@ -22,8 +23,8 @@
     "test"
   ],
   "devDependencies": {
-    "fava": "^0.2.1",
-    "tsex": "^3.0.1",
-    "typescript": "^5.1.6"
+    "fava": "^0.3.4",
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
   }
 }
